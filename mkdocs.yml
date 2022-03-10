@@ -1,0 +1,91 @@
+site_name: Mkdocs Starter Template
+site_url: https://github.com/thearjun/mkdocs-starter-template
+copyright: Copyright &copy; 2022 Arjun Adhikari
+repo_url: https://github.com/thearjun/mkdocs-starter-template
+repo_name: thearjun/mkdocs-starter-template
+edit_uri: "https://github.com/thearjun/mkdocs-starter-template/tree/master/notes/"
+
+docs_dir: notes/
+theme:
+  name: material
+  favicon: 'assets/images/logo.png'
+  logo: 'assets/images/logo.png'
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: deep purple
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: deep purple
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  language: en
+  features:
+    # - header.autohide
+    - navigation.tabs
+    # - navigation.instant
+  icon:
+    repo: fontawesome/brands/github
+
+markdown_extensions:
+  - meta
+  - abbr
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - pymdownx.highlight:
+      linenums_style: pymdownx.inline
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.keys
+  - pymdownx.tabbed
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.smartsymbols
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.arithmatex:
+      generic: true
+extra:
+  generator: false
+  disqus: thearjun
+  manifest: manifest.webmanifest
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/your-linkedin-username
+    - icon: fontawesome/brands/github
+      link: https://github.com/your-github-username
+    - icon: fontawesome/solid/envelope
+      link: mailto:yourmail@gmail.com
+
+extra_javascript:
+  - assets/js/extra.js
+  - assets/js/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+extra_css:
+  - assets/css/extra.css
+
+plugins:
+  - search
+  - macros:
+      include_dir: notes
+nav:
+  - index.md
